@@ -5,7 +5,7 @@ setup() {
 }
 
 teardown() {
-  rm -rf "$TEMP"
+  rmdir "$TEMP"
 }
 
 assert_dir_exists() {
