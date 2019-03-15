@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo
+echo "Fast tests:"
+
+./run_fast_tests  || exit
+
+echo
+echo "Integrations tests:"
+
+./run_integration_tests

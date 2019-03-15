@@ -1,0 +1,18 @@
+#!/bin/bash
+
+setup() {
+  TEMP=$(mktemp -d)
+}
+
+teardown() {
+  rm -rf "$TEMP"
+}
+
+assert_dir_exists() {
+  DIR=$1
+  [ -d "$DIR" ]
+}
+
+@test "creates a temp dir" {
+  assert_dir_exists "$TEMP"
+}

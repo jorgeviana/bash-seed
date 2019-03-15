@@ -1,0 +1,6 @@
+#!/bin/bash
+
+@test "greets" {
+  greeting=$(src/greeter)
+  [ "$greeting" == "Hello, World!" ]
+}
