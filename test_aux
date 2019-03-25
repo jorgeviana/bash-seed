@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function test_aux {
+  DESCR=$1
+  DIR=$2
+
+  echo
+  echo " --- $DESCR:"
+  echo
+
+  shellcheck -e SC1083 -e SC1089 "$DIR"/* || exit
+  shellcheck src/* || exit
+
+  echo "SHELLCHECK: OK"
+
+  echo
+  echo "BATS:"
+  echo
+  bats "$DIR"/*
+}
