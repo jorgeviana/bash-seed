@@ -20,12 +20,12 @@ Put the slow tests in directory ```integration_test```
 ```
 ./watch
 ```
-Watches for changes in ```src``` and ```test``` and then runs the linter (shellcheck) in both directories. After that runs the (fast...) tests.
+Watches for changes in ```src``` and ```test``` and then runs the linter (shellcheck) in both directories. After that runs only the fast tests.
 
-#### ... to build the whole thing
+#### ... to run all tests
                                                                                   
  ```
-./build
+./run_all_tests
 ```
 Checks everything by running the linter, the fast tests and the integration tests.
                                                                                   
